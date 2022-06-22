@@ -1,6 +1,8 @@
 # Getting Started with Create React App
 
 This is my soultion for frontend code challenge for Wave company. For the challenge description, please read README_Code_Challenge.md file! 
+useful links => https://codesandbox.io/s/react-fetch-async-data-redux-toolkit-forked-ekgzmr, https://youtu.be/SSy8CuJmh1o
+
 
 ## Available Scripts
 
