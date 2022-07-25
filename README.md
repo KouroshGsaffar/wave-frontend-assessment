@@ -4,6 +4,44 @@ This is my soultion for frontend code challenge for Wave company. For the challe
 
 useful links => https://codesandbox.io/s/react-fetch-async-data-redux-toolkit-forked-ekgzmr, https://youtu.be/SSy8CuJmh1o
 
+## Instructions on how to run the application
+For running the app, please unbundle the file and go to the code-challenge folder and do the
+following command in the terminal:
+1. Open terminal
+2. Go to the code-challenge folder directory
+3. Install node.js on your system(use the following documentation for installing node.js on
+your system. https://nodejs.org/en/download/package-manager/#macos )
+4. To install all packages in package.json, run npm i
+5. After successfully installing all packages and dependencies, run npm start to start the
+app
+6. If the application is compiled successfully on your device, the browser probably will be
+opened and the app starts to run. If the browser does not open the URL, the terminal will
+show you the address to open on your browser (something similar to
+http://localhost:3000 ). Copy the address and paste it into your browser.
+7. Now you can see the result and Edit customers as well.
+You can install a few Chrome extensions including (React Developer Tools and Redux
+DevTools) to inspect the React component hierarchies and Redux development workflow.
+## Implementation Explanation
+Since the functionality and fast implementation matter most, I just make the app
+functional in JavaScript and did not add much styling. If I want to spend more time I
+would definitely write everything in TypeScript, use Redux-Saga as the middleware of
+the Redux, and write unit and integration tests.
+The parts that I am proud of are:
+1. Using React-Redux for state management
+2. Creating composable, reusable components to use in later features and
+products.
+Since I was only fetching data from an API and calling this API once at the beginning, I
+used useEffect and createAsyncThunk to fetch the data. If I want to do more server
+calls (e.g make a PUT request to update the customer or a POST request to create a
+new customer) I will use Saga as middleware to make implementation more reusable.
+I tried to create reusable components to use in later features and products. As an
+example, the EditCustomer component can be used to add a new Customer as well.
+The only modification needed is to pass an empty customer object to the component
+and you can add more fields to the customer information form by passing the empty
+customer object with specific keys and empty strings as values.
+By using Redux, I can easily AddCustomer/DeleteCustomer reducers to add/delete
+customers and update the customer’s list.
+
 
 ## Available Scripts
 
