@@ -1,11 +1,12 @@
 import React from 'react'
+import Button from 'antd/es/button';
 
 export default function ActionButtons({edit,toggleEdit,handleUpdateCustomer}) {
   return (
     <>
-        <button onClick={toggleEdit}>
+        <Button onClick={toggleEdit}>
             {`${edit ? 'Cancel Edit' :'Edit'}`}
-        </button>
+        </Button>
         {edit && <button onClick={handleUpdateCustomer}>Update</button>}
     </>
   )
