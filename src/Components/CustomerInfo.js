@@ -6,7 +6,7 @@ export default function CustomerInfo({customer}) {
         { Object.keys(customer).map(key=>(
             (key==='id') ? null : 
             <div key={`${key}-${customer.id}`}>
-                {`${key}: ${customer[key]}`}
+                <span>{key}:</span> <span>{customer[key]}</span>
             </div>))}
     </div>
   )

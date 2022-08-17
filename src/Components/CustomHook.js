@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import { useDispatch } from 'react-redux'
-import {editCustomerInStore} from '../redux/customerSlice'
+import {editCustomerInStore,deleteCustomerInStore} from '../redux/customerSlice'
 
 export default function CustomHook(customer) {
     const dispatch=useDispatch()
@@ -28,9 +28,10 @@ export default function CustomHook(customer) {
         if (e.key === 'Escape'){
             setInputValues(initialValues)
             toggleEdit()
-        }else if(e.key === 'Enter'){
+        }else if(e.key === 'Enter'){    
             handleUpdateCustomer()
         }
     }
-  return ({edit,toggleEdit,inputValues,handleOnChangeInput,handleUpdateCustomer,handleKeyDown})
+    const handleDeleteCustomer=()=>dispatch(deleteCustomerInStore(customer.id))
+  return ({edit,toggleEdit,inputValues,handleOnChangeInput,handleUpdateCustomer,handleKeyDown,handleDeleteCustomer})
 }
