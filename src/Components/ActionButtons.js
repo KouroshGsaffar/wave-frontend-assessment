@@ -1,13 +1,14 @@
 import React from 'react'
-import Button from 'antd/es/button';
 
-export default function ActionButtons({edit,toggleEdit,handleUpdateCustomer}) {
+export default function ActionButtons({edit,toggleEdit,handleUpdateCustomer,handleDeleteCustomer,id}) {
+  console.log(id)
   return (
-    <>
-        <Button onClick={toggleEdit}>
+    <div style={edit ? {margin:'15px'} : {}}>
+        <button onClick={toggleEdit}>
             {`${edit ? 'Cancel Edit' :'Edit'}`}
-        </Button>
-        {edit && <button onClick={handleUpdateCustomer}>Update</button>}
-    </>
-  )
+        </button>
+        {edit && (<button onClick={handleUpdateCustomer}>Update</button>)}
+        {!edit && (<button onClick={handleDeleteCustomer}>Delete</button>)}
+    </div>
+  ) 
 }

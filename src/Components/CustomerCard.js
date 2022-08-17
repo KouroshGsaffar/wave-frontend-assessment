@@ -6,9 +6,9 @@ import ActionButtons from './ActionButtons'
 
 
 export default function CustomerCard({customer}) {
-    const{edit,inputValues,handleOnChangeInput,handleUpdateCustomer,handleKeyDown,toggleEdit}=CustomHook(customer)
+    const{edit,inputValues,handleOnChangeInput,handleUpdateCustomer,handleKeyDown,toggleEdit,handleDeleteCustomer}=CustomHook(customer)
   return (
-    <div style={{margin:"15px"}}>
+    <div style={{marginLeft:'15px'}}>
         {edit ? 
         <EditCustomer
         customer={customer}
@@ -16,7 +16,7 @@ export default function CustomerCard({customer}) {
         inputValues={inputValues}
         handleOnChangeInput={handleOnChangeInput}/>
         : <CustomerInfo customer={customer}/>}
-        <ActionButtons edit={edit} handleUpdateCustomer={handleUpdateCustomer} toggleEdit={toggleEdit}  />
+        <ActionButtons edit={edit} handleUpdateCustomer={handleUpdateCustomer} toggleEdit={toggleEdit} handleDeleteCustomer={handleDeleteCustomer} id={customer.id}  />
     </div>
   )
 }

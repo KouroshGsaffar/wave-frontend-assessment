@@ -1,0 +1,9 @@
+.wrapper{
+    width: 250px;
+    margin: 15px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -1,6 +1,5 @@
 import React,{useEffect} from 'react'
 import { useDispatch,useSelector } from 'react-redux'
-// import fetchCustomerList from './redux/fetchCustomerList'
 import Customers from './Components/Customers'
 import { fetchCustomerList } from './redux/customerSlice'
 
