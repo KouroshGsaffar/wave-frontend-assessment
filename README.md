@@ -60,19 +60,6 @@ functional in JavaScript and did not add much styling. If I want to spend more t
 would definitely write everything in TypeScript, use Redux-Saga as the middleware of
 the Redux, and write unit and integration tests.
 The parts that I am proud of are:
-1. Using React-Redux for state management
+1. Using React-Redux for state management and Redux-Saga as middleware
 2. Creating composable, reusable components to use in later features and
 products.
-Since I was only fetching data from an API and calling this API once at the beginning, I
-used useEffect and createAsyncThunk to fetch the data. If I want to do more server
-calls (e.g make a PUT request to update the customer or a POST request to create a
-new customer) I will use Saga as middleware to make implementation more reusable.
-I tried to create reusable components to use in later features and products. As an
-example, the EditCustomer component can be used to add a new Customer as well.
-The only modification needed is to pass an empty customer object to the component
-and you can add more fields to the customer information form by passing the empty
-customer object with specific keys and empty strings as values.
-By using Redux, I can easily AddCustomer/DeleteCustomer reducers to add/delete
-customers and update the customer’s list.
-
-
